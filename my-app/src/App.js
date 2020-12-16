@@ -11,6 +11,23 @@ class App extends React.Component {
     this.state = {
       playlist: []
     }
+    this.addSong = this.addSong.bind(this);
+    this.removeSong = this.removeSong.bind(this);
+  }
+
+  addSong(song) {
+    this.setState({
+      playlist: [...this.state.playlist, song]
+    })
+  }
+
+  removeSong(songId) {
+    this.setState(state => {
+      const list = state.playlist.filter(item => item.id !== songId);
+      return {
+        list,
+      };
+    });
   }
 
   render() {
