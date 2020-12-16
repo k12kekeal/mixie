@@ -1,20 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Search from '../src/Components/Search.jsx'
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playlist: []
+    }
+  }
 
-function App() {
+  render() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <br></br>
         <br></br>
-        <form>
-          <input type="text" placeholder="enter a song name"></input>
-          <input type="submit" value="Add song!"></input>
-        </form>
+        <Search></Search>
       </header>
     </div>
   );
+  }
+
 }
 
 export default App;
