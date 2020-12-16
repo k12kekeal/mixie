@@ -1,48 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import Search from '../src/Components/Search.jsx';
 import Cover from '../src/Components/Cover.jsx';
 import Playlist from '../src/Components/Playlist.jsx';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playlist: []
-    }
-    this.addSong = this.addSong.bind(this);
-    this.removeSong = this.removeSong.bind(this);
-  }
+const App = () => {
 
-  addSong(song) {
-    this.setState({
-      playlist: [...this.state.playlist, song]
-    })
-  }
+  const [playlist, setPlaylist] = useState([
+    {songId: 1, songTitle: "Live Like You're Dying", songArtist: "McGruff"},
+    {songId: 2, songTitle: "Don't", songArtist: "Billy Morgan"},
+    {songId: 3, songTitle: "Please", songArtist: "Bill Grounds"},
+    {songId: 4, songTitle: "I've Got A Girl", songArtist: "Billy Corgan"}]);
 
-  removeSong(songId) {
-    this.setState(state => {
-      const list = state.playlist.filter(item => item.id !== songId);
-      return {
-        list,
-      };
-    });
-  }
-
-  render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Search></Search>
-        <Cover></Cover>
-        <Playlist></Playlist>
-      </header>
-    </div>
-  );
-  }
-
+  const [searchText, setSearchText] = useState('');
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Search
+            setSearchText={setSearchText}
+            searchText={searchText}
+            playlist={playlist}
+            setPlaylist={setPlaylist}/>
+          <Cover />
+          <Playlist
+            playlist={playlist}
+            setPlaylist={setPlaylist}/>
+        </header>
+      </div>
+    );
 }
 
 export default App;

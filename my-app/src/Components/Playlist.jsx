@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
+import Song from './Song.jsx';
 
-const Playlist = () => {
-
-  const [count, setCount] = useState(0);
+const Playlist = ({playlist, setPlaylist}) => {
 
   return (
-    <p>
-      You clicked the button {count} times!
-      <button onClick={() => setCount(count + 1)}>
-        Clickity
-      </button>
-    </p>
+    <ul>
+
+    {playlist.map(song => (
+      <li className="song" key={song.songId}><Song song={song}/></li>
+    ))}
+    </ul>
   )
 
 }

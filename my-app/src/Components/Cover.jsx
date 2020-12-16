@@ -1,8 +1,6 @@
 const Cover = () => {
   return (
-    <p>
-      cover image widget go here
-    </p>
+      <img src="../../public/placeholder.jpg" className="cover-art" alt="playlist cover art" />
   )
 }
 
