@@ -1,7 +1,15 @@
+import React, {useState} from 'react';
+
 const Playlist = () => {
+
+  const [count, setCount] = useState(0);
+
   return (
     <p>
-      playlist go here
+      You clicked the button {count} times!
+      <button onClick={() => setCount(count + 1)}>
+        Clickity
+      </button>
     </p>
   )
 

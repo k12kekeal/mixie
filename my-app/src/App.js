@@ -18,8 +18,6 @@ class App extends React.Component {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <br></br>
-        <br></br>
         <Search></Search>
         <Cover></Cover>
         <Playlist></Playlist>
