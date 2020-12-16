@@ -1,6 +1,8 @@
+import placeholder from './placeholder.jpg'
+
 const Cover = () => {
   return (
-      <img src="../../public/placeholder.jpg" className="cover-art" alt="playlist cover art" />
+      <img src={placeholder} className="cover-art" alt="playlist cover art" />
   )
 }
 

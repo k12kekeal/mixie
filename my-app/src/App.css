@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -42,5 +42,9 @@
 }
 
 .cover-art {
-  background-color: aqua;
+  height: 40vmin;
+}
+
+.cover-art:hover {
+  cursor: pointer;
 }

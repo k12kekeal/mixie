@@ -23,6 +23,7 @@ const App = () => {
             searchText={searchText}
             playlist={playlist}
             setPlaylist={setPlaylist}/>
+            <br></br>
           <Cover />
           <Playlist
             playlist={playlist}
