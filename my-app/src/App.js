@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Search from '../src/Components/Search.jsx'
+import Search from '../src/Components/Search.jsx';
+import Cover from '../src/Components/Cover.jsx';
+import Playlist from '../src/Components/Playlist.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +21,8 @@ class App extends React.Component {
         <br></br>
         <br></br>
         <Search></Search>
+        <Cover></Cover>
+        <Playlist></Playlist>
       </header>
     </div>
   );
