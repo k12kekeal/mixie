@@ -15,6 +15,7 @@ const App = () => {
     {songId: 4, songTitle: "I've Got A Girl", songArtist: "Billy Corgan"}]);
 
   const [searchText, setSearchText] = useState('');
+  const searchSong = (search) => {console.log(search)};
 
     return (
       <div className="App">
@@ -25,7 +26,8 @@ const App = () => {
             searchText={searchText}
             playlist={playlist}
             setPlaylist={setPlaylist}
-            searchSong={apiMaster.searchSong}/>
+            // searchSong={apiMaster.searchSong}/>
+            searchSong={searchSong}/>
             <br></br>
           <Cover />
           <Playlist
