@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 import Search from '../src/Components/Search.jsx';
 import Cover from '../src/Components/Cover.jsx';
 import Playlist from '../src/Components/Playlist.jsx';
+import apiMaster from './apiMaster.js';
 
 const App = () => {
 
@@ -14,6 +15,7 @@ const App = () => {
     {songId: 4, songTitle: "I've Got A Girl", songArtist: "Billy Corgan"}]);
 
   const [searchText, setSearchText] = useState('');
+
     return (
       <div className="App">
         <header className="App-header">
@@ -22,7 +24,8 @@ const App = () => {
             setSearchText={setSearchText}
             searchText={searchText}
             playlist={playlist}
-            setPlaylist={setPlaylist}/>
+            setPlaylist={setPlaylist}
+            searchSong={apiMaster.searchSong}/>
             <br></br>
           <Cover />
           <Playlist

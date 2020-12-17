@@ -1,16 +1,23 @@
 import React from 'react';
+import Results from './Results.jsx'
 
-const Search = ({searchText, setSearchText, setPlaylist, playlist}) => {
+const Search = ({searchText, setSearchText, searchSong}) => {
   return(
+    <>
     <form>
-      <input value={searchText} type="text" placeholder="enter a song name" onChange={e => (setSearchText(e.target.value))}></input>
-      <input type="submit" value="Add song!" onSubmit={e => (setPlaylist(...playlist, searchText))}></input>
+      <input
+      value={searchText}
+      type="text"
+      placeholder="enter a song name"
+      onChange={e => (setSearchText(e.target.value))} />
+      <input
+      type="submit"
+      value="Search song!"
+      onSubmit={e => (searchSong(searchText))} />
     </form>
+    <Results />
+    </>
   )
 }
 
 export default Search;
-
-/*
-handleSearch
-*/
