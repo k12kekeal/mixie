@@ -1,6 +1,7 @@
 import axios from 'axios';
+import AUTH_TOKEN from './config.js';
 const url = "https://api.spotify.com/v1/"
-axios.defaults.headers.common['Authorization'] = "Bearer BQBlD8lQ65YztmMLkdkRl3z2tTcxjQk4UFY39FgF6xhibOTLrUPmGckiumugj2ym3vTNBPnVAGI875UxWtf4Kq3pMfV_Rq10nxii510QF-wVrySGVWtB0GiKBzktYTcEvbM6cD8JUEfr7y69B97gJRmSEiuJkFfRnWf7QUhHfj_NSPqu2KiB19YjiQBLnKcc4Ww";
+axios.defaults.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`;
 //CREATE new playlist
 
 const searchSong = (searchText) => {

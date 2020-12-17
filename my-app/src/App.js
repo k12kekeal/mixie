@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Search from "./Components/Search.jsx";
 import Cover from "./Components/Cover.jsx";
 import Playlist from "./Components/Playlist.jsx";
-import Results from "./Components/Results.jsx"
-import apiMaster from './apiMaster.js';
+import Results from "./Components/Results.jsx";
+import apiMaster from "./apiMaster.js";
 
 const App = () => {
   const [playlist, setPlaylist] = useState([
@@ -20,12 +20,16 @@ const App = () => {
   const [results, setResults] = useState([]);
 
   const searchSong = (search) => {
-    console.log('searching song...', search)
-    apiMaster.searchSong(search)
-      .then(data => {setResults(data.data.tracks.items)})
-      .catch(error => {console.log(error)});
+    console.log("searching song...", search);
+    apiMaster
+      .searchSong(search)
+      .then((data) => {
+        setResults(data.data.tracks.items);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
 
   return (
     <div className="App">
@@ -39,8 +43,14 @@ const App = () => {
             setPlaylist={setPlaylist}
             // searchSong={apiMaster.searchSong}/>
             searchSong={searchSong}
+          />
+          {results.length > 0 ? (
+            <Results
+              results={results}
+              setPlaylist={setPlaylist}
+              playlist={playlist}
             />
-            {results.length > 0 ? <Results results={results}/> : null}
+          ) : null}
         </div>
         <div className="column">
           <Cover />

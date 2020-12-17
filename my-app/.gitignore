@@ -21,6 +21,7 @@
 # personal
 todo.txt
 *.pem
+config.js
 
 npm-debug.log*
 yarn-debug.log*
