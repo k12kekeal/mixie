@@ -110,3 +110,11 @@
 .image-upload>input {
   display: none;
 }
+
+button:hover {
+  cursor:pointer;
+}
+
+input[type=button]:hover {
+  cursor: pointer;
+}

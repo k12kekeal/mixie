@@ -31,8 +31,11 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <div className="left-column">
+          <p></p>
           <h1>MIXIE</h1>
+          <p></p>
           <img src={logo} className="App-logo" alt="logo" />
+          <p></p>
           <Search
             setSearchText={setSearchText}
             searchText={searchText}
@@ -40,6 +43,7 @@ const App = () => {
             setPlaylist={setPlaylist}
             searchSong={searchSong}
           />
+          <p></p>
           {results.length > 0 ? (
             <Results
               results={results}

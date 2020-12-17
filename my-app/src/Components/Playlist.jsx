@@ -6,6 +6,7 @@ const Playlist = ({ playlist, setPlaylist }) => {
     return <p></p>;
   } else {
     return (
+      <>
       <ol>
         {playlist.map((song) => {
           const newList = playlist.filter(
@@ -25,6 +26,8 @@ const Playlist = ({ playlist, setPlaylist }) => {
           );
         })}
       </ol>
+      <button>Make my Mixie</button>
+      </>
     );
   }
 };

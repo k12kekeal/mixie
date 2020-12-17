@@ -6,11 +6,11 @@ const Search = ({searchText, setSearchText, searchSong}) => {
       <input
       value={searchText}
       type="text"
-      placeholder="enter a song name"
+      placeholder="...🎵🎵🎵..."
       onChange={e => (setSearchText(e.target.value))} />
       <input
       type="button"
-      value="Search song!"
+      value="Search!"
       onClick={e => {e.preventDefault(); searchSong(searchText); console.log('searchText: ', searchText)}} />
     </form>
   )
