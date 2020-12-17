@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #7C606B;
+  color: #50333e;
 }
 
 .App-link {
@@ -60,5 +60,28 @@
 }
 
 .result-item:hover {
+  background-color: #EB7BC0;
+}
+
+.title {
+ border-width: 0px;
+ text-align: center;
+ font-size: 2em;
+ background-color: rgba(0, 0, 0, 0);
+ text-decoration: underline;
+ color: #50333e;
+}
+
+.description {
+  border-width: 0px;
+  font-size: .75em;
+  text-align: center;
+  font-style: italic;
+  background-color: rgba(0, 0, 0, 0);
+  border-color:rgba(0, 0, 0, 0);
+  color: #50333e;
+}
+
+input[type=text]:focus {
   background-color: #EB7BC0;
 }

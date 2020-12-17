@@ -5,7 +5,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${AUTH_TOKEN}`;
 //CREATE new playlist
 
 const searchSong = (searchText) => {
-  return axios.get(`${url}search?q=${searchText}&type=track&market=US&limit=5`)
+  return axios.get(`${url}search?q=${searchText}&type=track&market=US&limit=10`)
 }
 
 

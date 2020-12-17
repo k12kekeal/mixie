@@ -6,14 +6,10 @@ import Cover from "./Components/Cover.jsx";
 import Playlist from "./Components/Playlist.jsx";
 import Results from "./Components/Results.jsx";
 import apiMaster from "./apiMaster.js";
+import MixInfo from "./Components/MixInfo.jsx"
 
 const App = () => {
-  const [playlist, setPlaylist] = useState([
-    { songId: 1, songTitle: "Live Like You're Dying", songArtist: "McGruff" },
-    { songId: 2, songTitle: "Don't", songArtist: "Billy Morgan" },
-    { songId: 3, songTitle: "Please", songArtist: "Bill Grounds" },
-    { songId: 4, songTitle: "I've Got A Girl", songArtist: "Billy Corgan" },
-  ]);
+  const [playlist, setPlaylist] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
@@ -35,6 +31,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <div className="column">
+          <h1>MIXIE</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <Search
             setSearchText={setSearchText}
@@ -53,6 +50,7 @@ const App = () => {
           ) : null}
         </div>
         <div className="column">
+          <MixInfo />
           <Cover />
           <Playlist playlist={playlist} setPlaylist={setPlaylist} />
         </div>
