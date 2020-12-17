@@ -1,9 +1,7 @@
 import React from 'react';
-import Results from './Results.jsx'
 
 const Search = ({searchText, setSearchText, searchSong}) => {
   return(
-    <>
     <form>
       <input
       value={searchText}
@@ -13,10 +11,8 @@ const Search = ({searchText, setSearchText, searchSong}) => {
       <input
       type="button"
       value="Search song!"
-      onClick={e => {searchSong(searchText)}} />
+      onClick={e => {e.preventDefault(); searchSong(searchText); console.log('searchText: ', searchText)}} />
     </form>
-    <Results />
-    </>
   )
 }
 

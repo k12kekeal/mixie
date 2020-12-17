@@ -9,19 +9,19 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
 .App-header {
-  background-color: #98a4bd;
+  background-color: #EDA4BD;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #7C606B;
 }
 
 .App-link {
@@ -37,8 +37,14 @@
   }
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
+
 .song:hover {
- background-color: aqua;
+ background-color: #EB7BC0;
+ cursor: pointer;
 }
 
 .cover-art {
@@ -47,4 +53,12 @@
 
 .cover-art:hover {
   cursor: pointer;
+}
+
+.result-item {
+  cursor: pointer
+}
+
+.result-item:hover {
+  background-color: #EB7BC0;
 }
