@@ -3,7 +3,7 @@ import Song from "./Song.jsx";
 
 const Playlist = ({ playlist, setPlaylist }) => {
   if (playlist.length === 0) {
-    return <p>Search for a song!</p>;
+    return <p></p>;
   } else {
     return (
       <ol>

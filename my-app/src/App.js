@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="column">
+        <div className="left-column">
           <h1>MIXIE</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <Search
@@ -38,7 +38,6 @@ const App = () => {
             searchText={searchText}
             playlist={playlist}
             setPlaylist={setPlaylist}
-            // searchSong={apiMaster.searchSong}/>
             searchSong={searchSong}
           />
           {results.length > 0 ? (

@@ -42,6 +42,12 @@
   width: 50%;
 }
 
+.left-column {
+  float: left;
+  width: 50%;
+  background-color: rgba(146, 100, 100, 0.336);
+}
+
 .song:hover {
  background-color: #EB7BC0;
  cursor: pointer;
@@ -49,6 +55,8 @@
 
 .cover-art {
   height: 40vmin;
+  background-color:rgba(146, 100, 100, 0.336);
+  padding: 5px;
 }
 
 .cover-art:hover {
@@ -72,6 +80,14 @@
  color: #50333e;
 }
 
+.title:hover {
+  cursor: pointer;
+}
+
+.title:focus {
+  cursor:text
+}
+
 .description {
   border-width: 0px;
   font-size: .75em;
@@ -80,8 +96,17 @@
   background-color: rgba(0, 0, 0, 0);
   border-color:rgba(0, 0, 0, 0);
   color: #50333e;
+  margin: 20px;
 }
 
-input[type=text]:focus {
-  background-color: #EB7BC0;
+.description:hover {
+  cursor: pointer;
+}
+
+.description:focus {
+  cursor:text
+}
+
+.image-upload>input {
+  display: none;
 }
