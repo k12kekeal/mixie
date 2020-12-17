@@ -11,9 +11,9 @@ const Search = ({searchText, setSearchText, searchSong}) => {
       placeholder="enter a song name"
       onChange={e => (setSearchText(e.target.value))} />
       <input
-      type="submit"
+      type="button"
       value="Search song!"
-      onSubmit={e => (searchSong(searchText))} />
+      onClick={e => {searchSong(searchText)}} />
     </form>
     <Results />
     </>
